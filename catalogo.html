@@ -16,17 +16,23 @@
           <img src="img/logo/aurea-logo.jpeg" class="logo" alt="Áurea">
           <span>Áurea</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="navbar-mobile-actions d-flex align-items-center gap-2 d-lg-none">
+          <a class="nav-cart-mobile" href="carrito.html" aria-label="Ver carrito">
+            <i class="bi bi-bag"></i>
+            <span class="cart-count-badge" data-cart-count>0</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
         <div class="collapse navbar-collapse" id="menu">
           <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
             <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
             <li class="nav-item"><a class="nav-link nav-whatsapp" href="#" data-whatsapp-action><i class="bi bi-whatsapp"></i> WhatsApp</a></li>
-            <li class="nav-item ms-lg-3">
-              <a class="btn btn-aurea" href="carrito.html">Carrito <span data-cart-count>0</span></a>
+            <li class="nav-item ms-lg-3 d-none d-lg-block">
+              <a class="btn btn-aurea" href="carrito.html"><i class="bi bi-bag"></i> Carrito <span data-cart-count>0</span></a>
             </li>
           </ul>
         </div>

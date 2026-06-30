@@ -369,3 +369,78 @@ footer {
   }
 
 }
+
+/* Carrito siempre visible en móvil */
+.navbar-mobile-actions {
+  margin-left: auto;
+}
+
+.nav-cart-mobile {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--oliva);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.25rem;
+  box-shadow: 0 10px 24px rgba(60, 50, 38, .16);
+  transition: .25s;
+}
+
+.nav-cart-mobile:hover,
+.nav-cart-mobile:focus {
+  background: var(--cafe);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.cart-count-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--dorado);
+  color: var(--texto);
+  border: 2px solid #fff;
+  font-size: .72rem;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+}
+
+.navbar-toggler {
+  border: 1px solid rgba(113, 139, 107, .35);
+  border-radius: 14px;
+  padding: .45rem .65rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 .2rem rgba(168, 205, 189, .35);
+}
+
+@media (max-width: 380px) {
+  .logo {
+    height: 46px;
+  }
+
+  .navbar-brand span {
+    font-size: 1.35rem;
+  }
+
+  .nav-cart-mobile,
+  .navbar-toggler {
+    width: 42px;
+    height: 42px;
+  }
+
+  .navbar-toggler {
+    padding: .35rem .55rem;
+  }
+}

@@ -90,3 +90,15 @@ manteniendo el mismo nombre.
 ## Cambiar colores
 
 Edita las variables dentro de `css/style.css` en la sección `:root`.
+
+## Carrito visible en móvil
+
+En teléfonos, el acceso al carrito queda visible al lado del botón de menú. Ya no es necesario abrir el menú desplegable para llegar al carrito.
+
+El contador se actualiza automáticamente gracias a los elementos con:
+
+```html
+<span data-cart-count>0</span>
+```
+
+La lógica está en `js/app.js`, dentro de la función `actualizarContadorCarrito()`.
