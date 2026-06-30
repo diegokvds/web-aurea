@@ -49,7 +49,7 @@ function renderCarrito() {
   }).join('') + `
     <div class="carrito-total">
       <h2>Total: ${formatoCLP(total)}</h2>
-      <button class="btn btn-aurea btn-lg" onclick="comprarCarrito()">Enviar pedido por WhatsApp</button>
+      <button class="btn btn-aurea btn-lg" onclick="comprarCarrito()">Finalizar compra</button>
     </div>
   `;
 }

@@ -16,6 +16,45 @@ Esta versión no tiene página de contacto ni formulario. El flujo principal es:
 
 También puedes abrir `index.html` directamente en el navegador.
 
+
+## Slider principal del inicio
+
+La imagen principal del inicio ahora es un slider de Bootstrap 5. Las imágenes están configuradas directamente en `index.html`, dentro del bloque:
+
+```html
+<div id="heroSlider" class="carousel slide carousel-fade hero-slider">
+```
+
+Actualmente usa estas imágenes:
+
+- `img/banners/aurea-logo.jpeg`
+- `img/banners/aurea-logoa.jpeg`
+- `img/banners/banner-piedras.svg`
+
+Para cambiar las imágenes del slider:
+
+1. Copia tus nuevas imágenes en `img/banners/`.
+2. Reemplaza el valor de `src` en cada `<img>` del carousel.
+3. Mantén la clase `hero-slider-img` para que se ajusten automáticamente.
+
+Para agregar una cuarta imagen, duplica un bloque:
+
+```html
+<div class="carousel-item">
+  <img src="img/banners/nueva-imagen.jpg" class="d-block w-100 hero-slider-img" alt="Nueva imagen Áurea">
+</div>
+```
+
+Luego agrega un nuevo indicador aumentando el número de `data-bs-slide-to`.
+
+La velocidad de cambio se modifica en `index.html` con:
+
+```html
+data-bs-interval="4000"
+```
+
+El valor está en milisegundos; `4000` equivale a 4 segundos.
+
 ## Cambiar número de WhatsApp
 
 Edita `js/whatsapp.js`:
