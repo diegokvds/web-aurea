@@ -1,12 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
   const contenedor = document.querySelector('#productosCatalogo');
   const destacados = document.querySelector('#productosDestacados');
+
   const render = (lista, destino) => {
     if (!destino) return;
+
     destino.innerHTML = lista.map(p => `
       <article class="col-12 col-md-6 col-lg-3">
         <div class="card producto-card h-100">
-          <img src="${p.imagenes[0]}" class="card-img-top" alt="${p.nombre}">
+          <div class="producto-img-container">
+            <img src="${p.imagenes[0]}" class="producto-img" alt="${p.nombre}">
+          </div>
           <div class="card-body d-flex flex-column">
             <span class="badge badge-aurea mb-2">${p.categoria}</span>
             <h3 class="h5">${p.nombre}</h3>
@@ -19,8 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
         </div>
-      </article>`).join('');
+      </article>
+    `).join('');
   };
+
+  const productosDestacados = PRODUCTOS.filter(producto => producto.destacado);
+
   render(PRODUCTOS, contenedor);
-  render(PRODUCTOS.slice(0, 4), destacados);
+  render(productosDestacados.length ? productosDestacados : PRODUCTOS.slice(0, 4), destacados);
 });
